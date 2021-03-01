@@ -94,19 +94,23 @@ function App() {
 
 
     return (
-      <div className="container">
+      <div className="container-fluid">
         <h3>Shopping list</h3>
-        <div>
-          <form onSubmit={add}>
-            <label>New item</label>
-            <input value={item} onChange={e => setItem(e.target.value)}/>
-            <input value={amount} onChange={e => setAmount(e.target.value)}/>
-            <button>Add</button>
+        <div className="row">
+          <form className=""onSubmit={add}>
+            <label className="col form-label">New item</label>
+            <input className="form-control-inline col" placeholder="type description" value={item} onChange={e => setItem(e.target.value)}/>
+            <input className="form-control-inline col" placeholder="type amount" value={amount} onChange={e => setAmount(e.target.value)}/>
+            <button className="btn add shadow-none">Add</button>
           </form>
         </div>
         <ul>
           {items.map(item => (
-            <li key={item.id}>{item.description}<span>{item.amount}</span><a className="delete" onClick={() => remove(item.id)} href="#">Delete</a></li>
+            <li className="row" key={item.id}>
+              <span className="col">{item.description}</span>
+              <span className="col">{item.amount}</span>
+              <a className="col" onClick={() => remove(item.id)} href="#">Delete</a>
+            </li>
           ))}
         </ul>
       </div>

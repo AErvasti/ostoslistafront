@@ -1,18 +1,28 @@
-.container {
-  margin-left: 16px;
-}
-.delete {
-  margin-left: 80px;
-}
-
 ul {
   list-style-type: none;
+  padding-left: 0;
+  max-width: 660px;
+  margin-top: 8px;
+}
+
+.add {
+  background-color: green;
+  color: white;
+  padding: 4px;
+  display: inline-block;
 }
 
 input {
-  margin: 4px;
+  margin-left: 4px;
+  margin-right: 4px;
 }
 
-span {
-  margin-left: 80px;
+a {
+  color: red;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+  text-decoration: underline;
 }
